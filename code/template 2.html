@@ -21,32 +21,32 @@
             overflow: hidden;
         }
 
- .background {
+.background {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90vw; /* Adjusted to fit most screen sizes */
-    max-width: 400px;
+    width: 80vw; /* Adjust size relative to screen width */
+    max-width: 350px; /* Limit max width */
     height: auto;
-    aspect-ratio: 4 / 5; /* Maintain proportion */
+    aspect-ratio: 4 / 5; /* Maintain aspect ratio */
     background: url('https://ghenaa.github.io/digital-card/images/template%201/md.jpeg') no-repeat center center;
     background-size: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0.7;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
+    border-radius: 10px; /* Slightly rounded corners */
 }
 
 .container {
-    width: 90vw;
-    max-width: 400px;
+    width: 75vw; /* Relative width */
+    max-width: 320px; /* Limit size */
     height: auto;
-    aspect-ratio: 4 / 5; /* Keep the proportions */
-    padding: 5%;
+    aspect-ratio: 4 / 5; /* Ensure proportions */
+    padding: 4%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    border: 5px solid #D3B8AE;
+    border-radius: 12px;
+    border: 4px solid #D3B8AE;
     position: relative;
     z-index: 3;
     opacity: 0;
@@ -56,7 +56,7 @@
 
         .decorative {
             font-family: 'Great Vibes', cursive;
-            font-size: 2em;
+            font-size: 1.8em;
             color: #8C665A;
             animation: fadeIn 1s ease-in-out;
         }
