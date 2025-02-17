@@ -25,32 +25,34 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
-    height: 500px;
-    background: url('https://ghenaa.github.io/digital-card/code/images/md.jpeg') no-repeat center center;
+    width: 90vw; /* Adjusted to fit most screen sizes */
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 4 / 5; /* Maintain proportion */
+    background: url('https://ghenaa.github.io/digital-card/images/template%201/md.jpeg') no-repeat center center;
     background-size: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
-    animation: rotateOut 3s ease-in-out forwards; /* Full 360 degree rotation */
-    opacity: 0.7; /* Make background slightly transparent */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    border-radius: 15px; /* Optional: Make the image have rounded corners */
+    opacity: 0.7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
-/* Card settings with nude color */
 .container {
-    width: 400px;
-    height: 500px;
-    background: rgba(250, 231, 225, 0.9); /* Nude color with some transparency */
-    padding: 20px;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 4 / 5; /* Keep the proportions */
+    padding: 5%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     border: 5px solid #D3B8AE;
     position: relative;
-    z-index: 3; /* Ensure the card stays on top */
-    opacity: 0; /* Start with the card hidden */
-    animation: fadeInCard 0.5s ease-in-out 3s forwards; /* 3s delay to wait for background animation */
+    z-index: 3;
+    opacity: 0;
+    animation: fadeInCard 0.5s ease-in-out 3s forwards;
 }
+
 
         .decorative {
             font-family: 'Great Vibes', cursive;
