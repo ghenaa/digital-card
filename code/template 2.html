@@ -25,19 +25,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80vw;
-    max-width: 350px;
+    width: 70vw; /* Reduced size */
+    max-width: 300px;
     height: auto;
     aspect-ratio: 4 / 5;
     background: url('https://ghenaa.github.io/digital-card/images/template%201/md.jpeg') no-repeat center center;
     background-size: cover;
     transform: translate(-50%, -50%);
-    transform-origin: center center; /* Ensures rotation happens from the center */
+    transform-origin: center;
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.6; /* Slightly reduce opacity for better text visibility */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    animation: rotateOut 6s linear infinite;
 }
 
 
@@ -56,37 +55,36 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .background {
-        width: 95vw;
-        max-width: none;
+        width: 85vw; /* Slightly larger on tablets */
     }
     .container {
-        width: 90vw;
+        width: 80vw;
     }
 }
 
 @media (max-width: 480px) {
     .background {
-        width: 100vw;
+        width: 90vw;
     }
     .container {
-        width: 95vw;
+        width: 85vw;
     }
 }
 
-/* Main container */
+/* Smaller card */
 .container {
-    width: 75vw;
-    max-width: 320px;
+    width: 65vw; /* Reduced size */
+    max-width: 280px;
     aspect-ratio: 4 / 5;
-    padding: 4%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    border: 4px solid #D3B8AE;
-    position: relative; /* Ensures date-box stays inside */
+    border: 3px solid #D3B8AE;
+    position: relative;
     z-index: 3;
     opacity: 0;
     animation: fadeInCard 0.5s ease-in-out 3s forwards;
@@ -104,10 +102,10 @@
     font-size: 1.2em;
 }
 
-/* Ensure date box is positioned correctly inside container */
+/* Keep date-box inside the card */
 .date-box {
-    font-size: 1.3em;
-    width: 200px;
+    font-size: 1.1em;
+    width: 180px; /* Slightly smaller */
     text-align: center;
     background: white;
     border-radius: 8px;
@@ -119,6 +117,7 @@
     transform: translateX(-50%);
     z-index: 5;
 }
+
 
         .aya {
             font-size: 1.5em;
@@ -132,16 +131,15 @@
 
 
 
-/* Adjusted rotation animation */
+/* Reduce rotation effect */
 @keyframes rotateOut {
     0% {
-        transform: translate(-50%, -50%) rotateZ(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotateZ(359deg); /* Stops browser rendering issues */
+        transform: translate(-50%, -50%) rotate(359deg);
     }
 }
-
 
         /* Fade-in animation for the card */
 @keyframes fadeInCard {
