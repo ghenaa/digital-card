@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>دعوة عقد قران</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&display=swap');
 
-        body {
-            font-family: 'Amiri', serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f9f5f3;
-            overflow: hidden;
-        }
+body {
+    font-family: 'Amiri', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f5f3;
+    overflow: hidden;
+}
 
 .background {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 70vw; /* Reduced size */
-    max-width: 300px;
+    width: 60vw; /* Further reduced size */
+    max-width: 240px; /* Reduced max width */
     height: auto;
     background: url('https://ghenaa.github.io/digital-card/images/template%201/md.jpeg') no-repeat center center;
     background-size: cover;
@@ -38,41 +38,21 @@
     border-radius: 10px;
 }
 
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .background {
-        width: 95vw;
-        max-width: none;
+/* Reduce rotation effect */
+@keyframes rotateOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
-    .container {
-        width: 90vw;
+    100% {
+        transform: translate(-50%, -50%) rotate(359deg);
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .background {
-        width: 85vw; /* Slightly larger on tablets */
-    }
-    .container {
-        width: 80vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .background {
-        width: 90vw;
-    }
-    .container {
-        width: 85vw;
-    }
-}
-
+/* Even smaller card */
 .container {
-    width: 65vw; /* Reduced size */
-    max-width: 280px;
-    padding: 20px; /* Adjust padding to control content space */
+    width: 55vw; /* Even smaller size */
+    max-width: 240px; /* Further reduce max width */
+    padding: 15px; /* Less padding to reduce space inside */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,10 +66,6 @@
     animation: fadeInCard 0.5s ease-in-out 3s forwards;
 }
 
-
-
-
-         scaling for better readability */
 .decorative {
     font-size: 1.8em;
 }
@@ -98,14 +74,13 @@
     font-size: 1.2em;
 }
 
-/* Keep date-box inside the card */
 .date-box {
-    font-size: 1.1em;
-    width: 180px; /* Slightly smaller */
+    font-size: 1em; /* Reduced text size */
+    width: 160px; /* Smaller width */
     text-align: center;
     background: white;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 4px 8px; /* Reduced padding */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     bottom: 10px; /* Keeps it inside the card */
@@ -114,30 +89,16 @@
     z-index: 5;
 }
 
-
-        .aya {
-            font-size: 1.5em;
-            color: #6D4C41;
-            margin-bottom: 15px;
-            animation: fadeIn 1.2s ease-in-out;
-            line-height: 1.8;
-        }
-
-
-
-
-
-/* Reduce rotation effect */
-@keyframes rotateOut {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(359deg);
-    }
+/* Styling for the Aya class */
+.aya {
+    font-size: 1.5em;
+    color: #6D4C41;
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-in-out;
+    line-height: 1.8;
 }
 
-        /* Fade-in animation for the card */
+/* Fade-in animation for the card */
 @keyframes fadeInCard {
     0% {
         opacity: 0;
@@ -148,6 +109,7 @@
         transform: scale(1);
     }
 }
+
 /* Fade and scale animation for the text */
 @keyframes fadeInScale {
     0% {
@@ -169,6 +131,39 @@ h1.decorative {
     z-index: 2;  /* Make sure it's above the background */
     position: relative;
 }
+
+/* Rotation animation for the background */
+@keyframes rotateOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(359deg); /* Full rotation */
+        opacity: 0.6; /* Reduce opacity for transparency */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .background {
+        width: 75vw; /* Slightly larger on tablets */
+    }
+    .container {
+        width: 70vw; /* Smaller card on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .background {
+        width: 80vw; /* Even larger on small screens */
+    }
+    .container {
+        width: 75vw; /* Smaller card on small screens */
+    }
+}
+
+
 
     </style>
 </head>
