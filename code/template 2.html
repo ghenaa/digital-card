@@ -126,6 +126,24 @@ h1.decorative {
     z-index: 2;  /* Make sure it's above the background */
     position: relative;
 }
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin-top: 30px;
+    }
+}
+
+/* Adjust for even smaller screens */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+        border-width: 5px;
+    }
+}
 
     </style>
 </head>
