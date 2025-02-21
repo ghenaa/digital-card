@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة عقد قران</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&display=swap');
+
+        body {
+            font-family: 'Amiri', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f5f3;
+            overflow: hidden;
+        }
+
+ .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 380px;
+    background: url('images/template 1/md.jpeg') no-repeat center center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: rotateOut 3s ease-in-out forwards; /* Full 360 degree rotation */
+    opacity: 0.7; /* Make background slightly transparent */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 15px; /* Optional: Make the image have rounded corners */
+}
+
+/* Card settings with nude color */
+.container {
+    width: 300px;
+    height: 380px;
+    background: rgb(250, 231, 225); /* Nude color with some transparency */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border: 5px solid #D3B8AE;
+    position: relative;
+    z-index: 3; /* Ensure the card stays on top */
+    opacity: 0; /* Start with the card hidden */
+    animation: fadeInCard 0.5s ease-in-out 3s forwards; /* 3s delay to wait for background animation */
+}
+
+        .decorative {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5em;
+            color: #8C665A;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            letter-spacing: 1px;
+            color: #8C665A;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .aya {
+            font-size: 1em;
+            color: #6D4C41;
+            margin-bottom: 15px;
+            animation: fadeIn 1.2s ease-in-out;
+            line-height: 1.8;
+        }
+
+/* Styling for the Date Box */
+.date-box {
+    display: inline-flex; /* Keep it inline with flexbox for horizontal alignment */
+    font-family: 'Great Vibes', cursive; /* Elegant font */
+    font-size: 2.5em; /* Adjust font size */
+    text-align: center; /* Center the text */
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeInScale 1.5s ease-in-out 2s forwards; /* Animation with delay */
+    position: relative; /* Proper positioning */
+    padding: 0; /* Remove padding */
+}
+
+
+/* Rotation animation for the background */
+@keyframes rotateOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* Full rotation */
+        opacity: 0.7; /* Reduce opacity for transparency */
+    }
+}
+
+
+
+        /* Fade-in animation for the card */
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Apply fade-in and scale-up animation to the "محمد & ديما" text */
+/* Add more decoration to the text */
+h1.decorative {
+    font-family: 'Great Vibes', cursive; /* Elegant font */
+    font-size: 4em; /* Slightly larger for more emphasis */
+    color: #8C665A; /* Warm color */
+    text-align: center; /* Center the text */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Soft shadow to make the text pop */
+    animation: fadeInScale 5s ease-in-out 1s forwards; /* Animation with delay */
+    z-index: 2; /* Ensure it's above the background */
+    position: relative; /* Positioning the element */
+}
+
+/* Animation for each part of the date */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Box Styling for each part of the date */
+.date-box span {
+    display: inline-block; /* Keep the boxes inline */
+    padding: 10px 15px; /* Padding inside the boxes */
+    margin: 0 10px; /* Space between the boxes */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #C89F73; /* Add border with gold color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    opacity: 0; /* Initially hidden for animation */
+    animation: zoomIn 5s ease-out forwards; /* Apply zoom-in animation */
+    font-size: 0.5em; /* Same font size for day, month, year */
+}
+
+/* Delay the animation for each part (day, month, year) */
+.date-box span.day {
+    animation-delay: 0.5s; /* Slight delay for the day */
+    color: #C89F73; /* Goldish color for the day */
+}
+
+.date-box span.month {
+    animation-delay: 1s; /* Slight delay for the month */
+    color: #9F7C53; /* Subtle color for the month */
+}
+
+.date-box span.year {
+    animation-delay: 1.5s; /* Slight delay for the year */
+    color: #8C665A; /* Elegant color for the year */
+}
+.flower {
+    width: 200px; /* Adjust size as needed */
+	height: 30px;
+    display: block;
+    margin: 0 auto 10px; /* Centers the image and adds spacing below */
+   animation: zoomIn 5s ease-out forwards; /* Apply zoom-in animation */
+}
+.namesmd {
+    width: 300px; /* Adjust size as needed */
+	height: 50px;
+    display: block;
+    margin: 0 auto 50px; /* Centers the image and adds spacing below */
+     animation: fadeInScale 6s ease-in-out forwards; /* Animation */
+}
+/* Zoom-In Animation */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start small */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Full size */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <p class="aya"> ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا <br>
+         لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾</p>
+		 <p class="decorative">الحمد لله الذي بنعمته تتم الصالحات</p>
+        <p class="subtitle">عقد قران</p>
+		<img src="images/textmd.png" alt="Flower Decoration" class="namesmd">
+       <img src="images/datemd.png" alt="Flower Decoration" class="flower">
+</div>
+    </div>
+</body>
+</html>
