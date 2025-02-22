@@ -36,16 +36,20 @@ body {
     opacity: 0.6;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Increased shadow */
     border-radius: 10px;
+    animation: rotateOut 9s linear forwards; /* 3x slower rotation */
+
 }
 
 
-/* Reduce rotation effect */
+/* Rotation animation for the background (slower) */
 @keyframes rotateOut {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
     }
     100% {
-        transform: translate(-50%, -50%) rotate(359deg);
+        transform: translate(-50%, -50%) rotate(359deg); /* Full rotation */
+        opacity: 0.6;
     }
 }
 
@@ -66,7 +70,7 @@ body {
     position: relative;
     z-index: 3;
     opacity: 0;
-    animation: fadeInCard 0.5s ease-in-out 3s forwards;
+    animation: fadeInCard 3s ease-in-out 6s forwards; /* Slow fade-in (was 0.5s) */
 }
 
 .decorative {
@@ -101,7 +105,7 @@ body {
     line-height: 1.8;
 }
 
-/* Fade-in animation for the card */
+/* Slow down fade-in for the card */
 @keyframes fadeInCard {
     0% {
         opacity: 0;
@@ -113,7 +117,7 @@ body {
     }
 }
 
-/* Fade and scale animation for the text */
+/* Smooth fade-in and scale for text */
 @keyframes fadeInScale {
     0% {
         opacity: 0;
@@ -130,7 +134,7 @@ h1.decorative {
     font-family: 'Great Vibes', cursive;
     font-size: 3em;
     color: #8C665A;
-    animation: fadeInScale 1.5s ease-in-out 1s forwards; /* 1s delay for the animation */
+    animation: fadeInScale 4s ease-in-out 2s forwards; /* Slow scale-up */
     z-index: 2;  /* Make sure it's above the background */
     position: relative;
 }
